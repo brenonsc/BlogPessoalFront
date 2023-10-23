@@ -1,27 +1,47 @@
-# React + TypeScript + Vite
+# Blog Pessoal - Frontend :writing_hand::atom_symbol:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do frontend para o Blog Pessoal, uma aplicação web que permite criar, visualizar, atualizar e excluir postagens, temas e usuários. Além disso, você pode associar temas a postagens e usuários a postagens. Este README fornece informações sobre como configurar, executar e utilizar este projeto.
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requisitos
 
-## Expanding the ESLint configuration
+Para executar este projeto em seu ambiente local, você precisará ter os seguintes requisitos instalados:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Node.js](https://nodejs.org/) - versão 14 ou superior
+- [Yarn](https://yarnpkg.com/)
 
-- Configure the top-level `parserOptions` property like this:
+<br>
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Executando o Projeto
+
+Após configurar o projeto, você pode executá-lo facilmente com o seguinte comando:
+
+Com Yarn:
+
+```bash
+yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Logo após, será necessário digitar a letra 'o'. O projeto será executado localmente e estará disponível no seu navegador em `http://localhost:5173`.
+
+<br>
+
+## Funcionalidades
+
+O Blog Pessoal - Frontend oferece as seguintes funcionalidades:
+
+- **CRUD de Postagens:** Crie, leia, atualize e exclua postagens.
+- **CRUD de Temas:** Crie, leia, atualize e exclua temas.
+- **Associação de Temas a Postagens:** Associe um ou mais temas a uma postagem.
+- **Associação de Usuários a Postagens:** Associe um usuário a uma postagem.
+
+<br>
+
+## Link para o Backend
+
+O backend para este projeto está hospedado no seguinte repositório:
+
+[Blog Pessoal - Backend](https://github.com/brenonsc/BlogPessoal)
+
+Certifique-se de configurar e executar o backend antes de usar este frontend para garantir o funcionamento adequado da aplicação.
