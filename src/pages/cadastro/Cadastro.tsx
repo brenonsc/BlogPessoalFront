@@ -6,6 +6,7 @@ import { cadastrarUsuario } from '../../services/Service'
 import Usuario from '../../models/Usuario'
 
 import './Cadastro.css'
+import {toastAlerta} from "../../utils/toastAlerta.ts";
 function Cadastro() {
 
     const navigate = useNavigate()
@@ -50,14 +51,14 @@ function Cadastro() {
 
             try {
                 await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario)
-                alert('Usuário cadastrado com sucesso')
+                toastAlerta('Usuário cadastrado com sucesso', "sucesso")
 
             } catch (error) {
-                alert('Erro ao cadastrar o Usuário')
+                toastAlerta('Erro ao cadastrar o Usuário', "erro")
             }
 
         } else {
-            alert('Dados inconsistentes. Verifique as informações de cadastro.')
+            toastAlerta('Dados inconsistentes. Verifique as informações de cadastro.', "erro")
             setUsuario({ ...usuario, senha: "" })
             setConfirmaSenha("")
         }
